@@ -42,8 +42,14 @@ echo "" > ./passwords
 Dê permissão de execução para o arquivo _novo-usuario.sh_ e execute-o para criar um novo usuário para autenticar no seu proxy. Você pode criar mais de um usuário.
 
 ```bash
-u+x ./novo-usuario.sh
+chmod u+x ./novo-usuario.sh
 ./novo-usuario.sh meuNovoUsuario
+```
+
+Se aparecer uma mensagem dizendo que o programa htpasswd não foi encontrado, instale-o
+
+```
+sudo apt-get install apache2-utils
 ```
 
 Abra o arquivo docker-compose.yml e, na linha 32, altere o _dominio.com.br_ para o domínio que você vai usar
